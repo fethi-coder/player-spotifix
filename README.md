@@ -1,3 +1,7 @@
+Avant toutes les étapes ci-dessous vous devez récupérer une clef Api sur le site spotify developper
+N'hésiter pas utilisé ce site il est open source et il est à votre disposition.
+bisou
+
 # Spotifix
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
