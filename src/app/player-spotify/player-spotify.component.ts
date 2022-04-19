@@ -22,6 +22,9 @@ export class PlayerSpotifyComponent implements OnInit {
   altDesc: any = "artist"
   track: any = ""
   allMusique: any = []
+  heartImg ="../../assets/image/heart.png"
+altHeart="boutton pour ajouter le morceau en coup de coeur"
+
   audio = new Audio();
   audioEvents = [
     "ended",

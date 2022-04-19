@@ -143,6 +143,49 @@ input[type=range].input-timer {
     cursor: pointer;
 }
 
+.button-player .btn-heart .img-heart {
+    position: relative;
+    height: 34px;
+    width: 34px;
+    border-radius: 50px;
+    right: inherit;
+    border: solid 2px rgb(109, 64, 113);
+    object-fit: contain;
+    box-shadow: 2px 2px 5px #0d0d0d, -2px -2px 5px #353535;
+    cursor: pointer;
+}
+
+.button-player .btn-heart {
+    color: white;
+    height: 35px;
+    width: 35px;
+    font-size: .5em;
+    border-radius: 50px;
+    background: #d018be79;
+    box-shadow: 2px 2px 5px #0d0d0d, -2px -2px 5px #353535;
+}
+
+.btn-heart:active {
+    transform: translateY(1px);
+    cursor: pointer;
+    animation: heart .9s infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(50%);
+    }
+    33% {
+        transform: scale(40%);
+    }
+    66% {
+        transform: scale(100%);
+    }
+    100% {
+        transform: scale(0%);
+    }
+}
+
 .info-title {
     height: 100px;
     font-size: .7rem;

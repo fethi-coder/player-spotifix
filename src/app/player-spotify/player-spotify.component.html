@@ -14,7 +14,9 @@
     <div class="button-player">
         <button class="btn-player active" (click)="trackOne(a.id)"> > </button>
         <button class="btn-player active" (click)="pause()">||</button>
-        <button class="btn-heart active" (click)="sendHeart(a)">coeur</button>
+        <button class="btn-heart active" (click)="sendHeart(a)">
+            <img class="img-heart" [src]="heartImg" [alt]="altHeart">
+        </button>
     </div>
 
     <div class="info-title">
