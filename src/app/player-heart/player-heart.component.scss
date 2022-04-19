@@ -1,0 +1,61 @@
+.section-one {
+    position: absolute;
+    height: 55px;
+    width: 34%;
+    bottom: 12px;
+    right: 30%;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #212121;
+    background: #212121;
+    box-shadow: 5px 5px 5px #131313, -5px -5px 5px #2f2f2f;
+}
+
+.titre {
+    width: 190px;
+    word-break: keep-all;
+    text-align: center;
+    animation: titre 1s both;
+}
+
+@keyframes titre {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container-player-heart {
+    width: 100%;
+}
+
+.container-button {
+    position: relative;
+    height: 30px;
+    width: 300px;
+    gap: 12px;
+    left: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-player {
+    height: 23px;
+    width: 23px;
+    border: solid 2px black;
+    background-color: #212121;
+    background: #212121;
+    box-shadow: 5px 5px 5px #131313, -5px -5px 5px #2f2f2f;
+    cursor: pointer;
+}
+
+.btn-player:active {
+    transform: translateY(1px);
+    cursor: pointer;
+}

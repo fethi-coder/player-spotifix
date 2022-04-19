@@ -1,0 +1,11 @@
+<section class="section-one">
+    <div class="container-player-heart" *ngFor="let a of data">
+        <p>{{duration}}</p>
+        <div class="container-button">
+            <button class="btn-player active" (click)="trackOne(a.id)"> > </button>
+            <button class="btn-player active" (click)="pause()">||</button>
+            <p class="titre">{{a.name}}</p>
+        </div>
+    </div>
+
+</section>

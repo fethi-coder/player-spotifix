@@ -1,0 +1,25 @@
+<section class="section-one" *ngFor="let a of data">
+
+    <h1 class="duration" *ngIf="duration !=null">{{duration}}</h1>
+
+    <div class="container-img">
+        <input class="input-volume" type="range" min="0" max="1" step="0.1" value="0.5" (input)="setVolume($event)">
+        <img [src]="a.images[0].url" [alt]="altDesc">
+    </div>
+
+    <div class="container-input-time">
+        <input class="input-timer" type="range" min="0" max="30" [value]="current" (input)="setSeek($event)">
+    </div>
+
+    <div class="button-player">
+        <button class="btn-player active" (click)="trackOne(a.id)"> > </button>
+        <button class="btn-player active" (click)="pause()">||</button>
+        <button class="btn-heart active" (click)="sendHeart(a)">coeur</button>
+    </div>
+
+    <div class="info-title">
+        <p>{{a.name}}</p>
+        <p>{{a.release_date}}</p>
+    </div>
+
+</section>

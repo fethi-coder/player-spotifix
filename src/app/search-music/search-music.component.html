@@ -1,0 +1,25 @@
+<section class="section-one">
+    <div class="input-search">
+        <input type="text" [(ngModel)]="query" name="search" id="search" placeholder="artiste" />
+        <button class="btn-search" (click)="search()">></button>
+        <div class="token">
+            <input type="text" name="token" id="token" [(ngModel)]="token" (keyup)="tokenRecord(token)" placeholder="token" />
+        </div>
+    </div>
+
+    <div class="search-container">
+        <h2>tes artistes</h2>
+        <div class="result-search" *ngFor="let a of resultGlobal; let index = index">
+            <button class="container-result" (click)="sendData(a)">
+        <img class="image-artist" [src]="a.album.images[1].url" [alt]="" />
+        <div class="text-artist">
+          <p>{{ a.album.name }}</p>
+          <p>date : {{ a.album.release_date }}</p>
+        </div>
+      </button>
+        </div>
+    </div>
+
+
+</section>
+<app-player-spotify [data]="deatailArtist"></app-player-spotify>

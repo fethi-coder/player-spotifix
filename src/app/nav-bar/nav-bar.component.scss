@@ -1,0 +1,141 @@
+.nav {
+    z-index: 4;
+    position: fixed;
+    width: 10vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    box-shadow: 5px 5px 5px #131313, -5px -5px 5px #2f2f2f;
+    animation: menuClose .5s both;
+}
+
+@keyframes menuClose {
+    from {
+        transform: translateX(0vw);
+    }
+    to {
+        transform: translateX(-10vw);
+    }
+}
+
+.nav-open {
+    z-index: 4;
+    position: fixed;
+    width: 10vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.084);
+    background: #2121218e;
+    box-shadow: 5px 5px 5px #131313, -5px -5px 5px #2f2f2f;
+    animation: menuOpen .5s both;
+}
+
+@keyframes menuOpen {
+    from {
+        transform: translateX(-10vw);
+    }
+    to {
+        transform: translateX(0vw);
+    }
+}
+
+.menu {
+    z-index: 4;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.btnOpen .imageMenu {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    left: 50px;
+    background-color: transparent;
+    object-fit: contain;
+    border-radius: 4px;
+    background: linear-gradient(145deg, #1e1e1e, #23232387);
+    box-shadow: 5px 5px 13px #141414, -5px -5px 13px #2e2e2e;
+}
+
+.menu p {
+    z-index: 4;
+    width: 10vw;
+    text-align: center;
+    background-color: transparent;
+}
+
+.btnOpen {
+    z-index: 4;
+    position: relative;
+    font-weight: 900;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.logo {
+    z-index: 4;
+    position: relative;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.logo img {
+    z-index: 4;
+    height: 90px;
+    width: 90px;
+}
+
+.nom {
+    background-color: transparent;
+    text-align: center;
+    word-break: keep-all;
+    font-size: .8em;
+    margin-top: 6px;
+}
+
+.scroll {
+    height: 90%;
+    width: auto;
+    overflow-y: scroll;
+    background-color: transparent;
+}
+
+.scroll::-webkit-scrollbar {
+    height: 12px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.image-album {
+    height: 70px;
+    width: 70px;
+    background-size: cover;
+}

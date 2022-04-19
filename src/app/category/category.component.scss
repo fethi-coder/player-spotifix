@@ -1,0 +1,126 @@
+.section-one {
+    position: relative;
+    width: 100vw;
+    height: auto;
+    padding-bottom: 5vh;
+    top: 635px;
+    color: white;
+    background-color: #212121;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+/*------------------------------------------------------------------------------------coup de coeur--------------------------------------------------------------------*/
+
+h2 {
+    position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    background-color: transparent;
+    color: rgba(255, 174, 0, 0.381);
+    top: 2px;
+}
+
+.scroll {
+    position: relative;
+    width: 94vw;
+    height: 400px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-padding: 1px;
+    border-radius: 5px;
+    background-color: #212121;
+    background: #212121;
+    box-shadow: 5px 5px 5px #131313, -5px -5px 5px #2f2f2f;
+}
+
+.container-pop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll::-webkit-scrollbar {
+    height: 12px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 174, 0, 0.381);
+    border-radius: 10px;
+}
+
+.card-pop {
+    height: 230px;
+    width: 200px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #e7ce417c;
+    box-shadow: 5px 5px 5px #131313, -5px -5px 5px #2f2f2f;
+}
+
+.killer {
+    position: relative;
+    color: rgb(23, 23, 23);
+    height: 25px;
+    width: 25px;
+    top: -14px;
+    left: 80px;
+    padding: 5px;
+    border: solid 2px rgb(23, 23, 23);
+    text-align: center;
+    border-radius: 50px;
+    background: #817531;
+    box-shadow: 3px 3px 16px #342f14, -3px -3px 7px #cebb4e;
+    cursor: pointer;
+}
+
+.killer:active {
+    transform: translateY(2px);
+}
+
+.image-pop {
+    position: relative;
+    height: 100px;
+}
+
+.text-pop {
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: keep-all;
+    background-color: transparent;
+}
+
+.text {
+    width: 80%;
+    margin-top: 4px;
+    font-weight: 540;
+    background-color: transparent;
+}

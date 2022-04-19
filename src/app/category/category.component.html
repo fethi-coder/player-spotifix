@@ -1,0 +1,16 @@
+<section class="section-one">
+
+    <div class="scroll" id="scroll-id">
+        <h2>tes coups de coeur</h2>
+        <div class="container-pop" *ngFor="let a of arrayHeart.slice(1,5).reverse()">
+            <button class="card-pop" (click)="sendTrack(a.id)" (click)="sendImage(a.image)">
+                <button class="killer active" (click)="removeHeart(a)">X</button>
+            <img [src]="a.image" alt="" class="image-pop">
+            <div class="text-pop">
+                <p class="text">{{a.name}}</p>
+            </div>
+            </button>
+        </div>
+        <app-player-heart [data]="deatailArtist"></app-player-heart>
+    </div>
+</section>

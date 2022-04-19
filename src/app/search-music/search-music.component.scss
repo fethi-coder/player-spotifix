@@ -1,0 +1,226 @@
+.section-one {
+    position: absolute;
+    height: 100vh;
+    width: auto;
+}
+
+h2 {
+    position: absolute;
+    top: 2px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: 900;
+    background-color: transparent;
+    color: rgba(154, 63, 63, 0.935);
+}
+
+.token {
+    height: 45px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: transparent;
+    color: white;
+}
+
+.token p {
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.token input {
+    height: 20px;
+    width: 100px;
+}
+
+.token input::content,
+::placeholder {
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+}
+
+.input-search {
+    position: relative;
+    width: 60vw;
+    height: 70px;
+    padding: 40px;
+    top: 15px;
+    left: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: #212121;
+    box-shadow: 10px 10px 20px #161616, -10px -10px 20px #2c2c2c;
+}
+
+.input-search input {
+    height: 30px;
+    width: 60%;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+input::placeholder {
+    width: 90%;
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+}
+
+input::content {
+    text-align: center;
+    font-size: large;
+    font-weight: 600;
+}
+
+.text-artist {
+    width: 25vw;
+    background-color: #0c0c0c;
+    margin-top: 25px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.input-search .btn-search {
+    position: relative;
+    height: 6.5vh;
+    width: 60px;
+    margin-left: 23px;
+    border-radius: 9px;
+    font-size: 24px;
+    font-weight: 800;
+    background-color: rgb(203, 69, 62);
+    color: black;
+}
+
+.search-container {
+    position: relative;
+    height: 400px;
+    width: 60vw;
+    top: 100px;
+    left: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    overflow-x: visible;
+    overflow-y: hidden;
+    border-radius: 20px;
+    background: #212121;
+    box-shadow: 10px 10px 20px #181818, -10px -10px 20px #2a2a2a;
+    border: solid 5px rgba(0, 0, 0, 0.061);
+}
+
+.search-container::-webkit-scrollbar {
+    width: 100%;
+}
+
+.search-container::-webkit-scrollbar-track {
+    position: relative;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.search-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+    width: auto;
+}
+
+.search-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 10px;
+}
+
+.search-container .result-search {
+    position: relative;
+    height: 45vh;
+    width: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    animation: artist 1s both;
+    background-color: transparent;
+}
+
+@keyframes artist {
+    from {
+        height: 0vh;
+    }
+    to {
+        height: 40vh;
+    }
+}
+
+.section-one .search-container .result-search {
+    height: 100vh;
+    gap: 12px;
+}
+
+.container-result {
+    height: 100%;
+    width: 30vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: #cb453e87;
+    ;
+    cursor: pointer;
+    border: none;
+    box-shadow: 5px 5px 5px #0d0d0d, -5px -5px 5px #353535;
+}
+
+.image-artist {
+    position: relative;
+    top: 10px;
+    height: 120px;
+    width: 120px;
+    background-size: cover;
+}
+
+.text-artist {
+    position: relative;
+    height: 20vh;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    word-break: keep-all;
+    background-color: transparent;
+    line-height: 15px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.908);
+    font-family: 'PT Sans Narrow', sans-serif;
+    animation: text-artist 1s both;
+}
+
+@keyframes text-artist {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.text-artist p {
+    width: 80%;
+    text-align: center;
+    word-break: keep-all;
+    font-size: 1em;
+    background-color: transparent;
+}
+
+.second {
+    color: white;
+}

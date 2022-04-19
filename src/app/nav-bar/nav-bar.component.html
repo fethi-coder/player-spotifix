@@ -1,0 +1,13 @@
+<nav [ngClass]="{'nav-open':largeur,'nav':!largeur}">
+    <div class="logo"><img [src]="imageLogo" [alt]="altLogo">
+        <button class="btnOpen" (click)="openBtn()">
+            <img class="imageMenu"  [src]="imageMenu" [alt]="menuAlt">
+        </button>
+    </div>
+    <div class="scroll">
+        <span class="menu" *ngFor="let a of arrayPlaylist">
+            <img class="image-album"  [src]="a.image" alt="album">
+            <span class="nom">{{a.name}}</span>
+        </span>
+    </div>
+</nav>
