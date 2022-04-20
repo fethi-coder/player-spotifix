@@ -40,18 +40,18 @@
 
 .imageArtist {
     position: relative;
-    height: 40vh;
-    width: 40vw;
-    right: 65px;
+    height: 80%;
+    width: 70%;
+    right: 0px;
     border-radius: 50%;
     border: solid 2px white;
 }
 
 .imageArtistDisk {
     position: relative;
-    height: 40vh;
-    width: 40vw;
-    right: 65px;
+    height: 80%;
+    width: 70%;
+    right: 0px;
     border-radius: 50%;
     animation: disk-rotate 2s linear infinite .2s;
 }
@@ -73,11 +73,11 @@
 
 input[type=range].input-volume {
     z-index: 5;
-    position: relative;
-    top: 0px;
+    position: absolute;
+    top: 130px;
     height: 10px;
-    right: 20px;
-    transform: rotate(270deg);
+    right: -40px;
+    transform: rotate(-90deg);
 }
 
 .input-volume[type=range]::-webkit-slider-runnable-track {
@@ -107,6 +107,21 @@ input[type=range].input-volume {
     background-color: #212121;
     background: #212121;
     box-shadow: 5px 5px 21px #0f0f0f, -5px -5px 21px #333333;
+}
+
+.input-volume-animation {
+    position: relative;
+    animation: volume-animation 3s both;
+}
+
+@keyframes volume-animation {
+    from {
+        transform: translate(-25px -40px);
+        background-color: #9f5fa7;
+    }
+    to {
+        transform: translate(-34px);
+    }
 }
 
 .container-input-time {

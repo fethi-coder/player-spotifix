@@ -48,9 +48,14 @@ altHeart="boutton pour ajouter le morceau en coup de coeur"
   stream() {
     return new Observable(() => {
       this.audio.load()
-      this.audio.src = this.track
+     if(this.track != undefined){
+       this.audio.src = this.track
+       this.disk = true
+     }else{
+       alert("format non pris en charge")
+     }
         this.audio.pause
-        this.audio.play
+        this.audio.play()
   
  
 
@@ -113,10 +118,9 @@ altHeart="boutton pour ajouter le morceau en coup de coeur"
       this.serviceTrack.trackService(event).subscribe(data => {
         let elementOneTitle = data.tracks.items[1].preview_url;
         this.track = elementOneTitle
-        this.stream().subscribe(() => { })
-        this.audio.play()
-        this.disk = true
+        this.stream().subscribe()
       }).unsubscribe
+      console.log(event);
     } else {
       alert('vous devez choisir un artiste')
     }

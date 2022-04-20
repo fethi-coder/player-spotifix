@@ -28,7 +28,12 @@ export class CategoryComponent implements OnInit {
     })
     data$.subscribe({
       next: value => console.log(value),
-      error: err => console.error(err),
+      error: err =>{try {
+        if(err == undefined ){ this.arrayHeart = []}else{console.log("no error");
+        };
+      } catch (error) {
+        console.error(err)
+      }},
       complete: () => console.log('complete')
     }).unsubscribe;
   }
