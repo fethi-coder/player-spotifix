@@ -38,12 +38,37 @@
     justify-content: center;
 }
 
-img {
+.imageArtist {
     position: relative;
     height: 40vh;
-    width: 90%;
+    width: 40vw;
     right: 65px;
-    border-radius: 5px;
+    border-radius: 50%;
+    border: solid 2px white;
+}
+
+.imageArtistDisk {
+    position: relative;
+    height: 40vh;
+    width: 40vw;
+    right: 65px;
+    border-radius: 50%;
+    animation: disk-rotate 2s linear infinite .2s;
+}
+
+@keyframes disk-rotate {
+    from {
+        border-radius: 50%;
+        transform: rotate(0deg);
+        border: solid 2px white;
+        box-shadow: 5px 5px 0px #0d0d0d, -5px -5px 0px #353535;
+    }
+    to {
+        border-radius: 49%;
+        transform: rotate(-360deg);
+        border: solid 2px white;
+        box-shadow: 5px 5px 0px #0d0d0d, -5px -5px 0px #353535;
+    }
 }
 
 input[type=range].input-volume {
