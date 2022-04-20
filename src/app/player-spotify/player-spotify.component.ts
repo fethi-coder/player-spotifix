@@ -14,7 +14,7 @@ import * as moment from 'moment';
   styleUrls: ['./player-spotify.component.scss']
 })
 export class PlayerSpotifyComponent implements OnInit {
-
+disk:boolean=false
   current: number = 0
   duration: any = "00:00"
   @Input() data: any
@@ -49,7 +49,9 @@ altHeart="boutton pour ajouter le morceau en coup de coeur"
     return new Observable(() => {
       this.audio.load()
       this.audio.src = this.track
-      this.audio.play()
+        this.audio.pause
+        this.audio.play
+  
  
 
       const handler = () => {
@@ -79,6 +81,7 @@ altHeart="boutton pour ajouter le morceau en coup de coeur"
 
   pause() {
     this.audio.pause()
+    this.disk = false
   }
 
   stop() {
@@ -99,6 +102,8 @@ altHeart="boutton pour ajouter le morceau en coup de coeur"
 /*-------------------------------------------------------------------------------------------timer du player---------------------------------------------------------------*/
   format(time: number, format = "mm:ss") {
     const momentTime = time * 1000
+    if(momentTime == 0)
+      this.disk =false
     return moment.utc(momentTime).format(format)
   }
 
@@ -110,6 +115,7 @@ altHeart="boutton pour ajouter le morceau en coup de coeur"
         this.track = elementOneTitle
         this.stream().subscribe(() => { })
         this.audio.play()
+        this.disk = true
       }).unsubscribe
     } else {
       alert('vous devez choisir un artiste')
