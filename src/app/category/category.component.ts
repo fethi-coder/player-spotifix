@@ -11,14 +11,13 @@ import { TrackService } from 'src/common/service/track.service';
 })
 export class CategoryComponent implements OnInit {
   imageDownload: string = "../../assets/image/download_111133.svg"
-  arrayHeart: any = []
+  arrayHeart: any = [] || ''
   deatailArtist:any=""
 
   constructor(private service: PlaylistService,private serviceTrack:TrackService) { }
 
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {    
     const data$ = new Observable(observer => {
       setInterval(() => {
         observer.next(this.arrayHeart = JSON.parse(localStorage.getItem('heart') || '{}'))
@@ -27,13 +26,8 @@ export class CategoryComponent implements OnInit {
       }, 500)
     })
     data$.subscribe({
-      next: value => console.log(value),
-      error: err =>{try {
-        if(err == undefined ){ this.arrayHeart = []}else{console.log("no error");
-        };
-      } catch (error) {
-        console.error(err)
-      }},
+      next: value => this.arrayHeart = value || '{}',
+      error: err =>console.error(err),
       complete: () => console.log('complete')
     }).unsubscribe;
   }

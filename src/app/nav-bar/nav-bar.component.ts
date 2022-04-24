@@ -21,18 +21,16 @@ arrayPlaylist:any=[]
 
   ngOnInit(): void {
     const data$ = new Observable(observer => {
-        setInterval(() => {
+       
           observer.next(this.arrayPlaylist = JSON.parse(localStorage.getItem('heart') || '{}'))
           observer.complete()
-        }, 600)
+       
     })
     data$.subscribe({
       next: value => console.log(value),
       error: err => console.error(err),
       complete: () => console.log('complete')
-    });
-console.log(this.arrayPlaylist);
-    this.openBtn()
+    }).unsubscribe;
   }
 
 
