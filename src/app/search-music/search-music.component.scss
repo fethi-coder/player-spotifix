@@ -21,9 +21,16 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     background-color: transparent;
     color: white;
+}
+
+.token button{
+    height: 30px;
+    width: 55px;
+    border-radius: 12px;
+    background-color: white;
 }
 
 .token p {
