@@ -1,9 +1,8 @@
 .section-one {
-    position: absolute;
-    height: 480px;
-    width: 25vw;
-    transform: translateX(-3px);
-    top: 20vh;
+    position: relative;
+    height: 500px;
+    width: 330px;
+    top: 180px;
     color: aliceblue;
     border-radius: 10px;
     background-color: #212121;
@@ -14,10 +13,10 @@
 
 @keyframes player {
     from {
-        right: -100%;
+        left: 0vw;
     }
     to {
-        right: .8%;
+        left: 72vw;
     }
 }
 
@@ -30,7 +29,7 @@
 
 .container-img {
     position: relative;
-    height: 40vh;
+    height: 300px;
     width: 100%;
     border-radius: 50px;
     display: flex;
@@ -40,18 +39,18 @@
 
 .imageArtist {
     position: relative;
-    height: 40vh;
-    width: 40vw;
-    right: 65px;
+    height: 280px;
+    width: 280px;
+    right: 0px;
     border-radius: 50%;
     border: solid 2px white;
 }
 
 .imageArtistDisk {
     position: relative;
-    height: 40vh;
-    width: 40vw;
-    right: 65px;
+    height: 280px;
+    width: 280px;
+    right: 0px;
     border-radius: 50%;
     animation: disk-rotate 2s linear infinite .2s;
 }
@@ -73,11 +72,11 @@
 
 input[type=range].input-volume {
     z-index: 5;
-    position: relative;
-    top: 0px;
+    position: absolute;
+    top: 130px;
     height: 10px;
-    right: 20px;
-    transform: rotate(270deg);
+    right: -40px;
+    transform: rotate(-90deg);
 }
 
 .input-volume[type=range]::-webkit-slider-runnable-track {
@@ -107,6 +106,21 @@ input[type=range].input-volume {
     background-color: #212121;
     background: #212121;
     box-shadow: 5px 5px 21px #0f0f0f, -5px -5px 21px #333333;
+}
+
+.input-volume-animation {
+    position: relative;
+    animation: volume-animation 3s both;
+}
+
+@keyframes volume-animation {
+    from {
+        transform: translate(-25px -40px);
+        background-color: #9f5fa7;
+    }
+    to {
+        transform: translate(-34px);
+    }
 }
 
 .container-input-time {
@@ -144,13 +158,14 @@ input[type=range].input-timer {
 }
 
 .button-player {
-    height: 10vh;
+    height: 50px;
     padding-top: 5px;
     padding-bottom: 5px;
     gap: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
 }
 
 .button-player button {
@@ -212,7 +227,7 @@ input[type=range].input-timer {
 }
 
 .info-title {
-    height: 100px;
+    height: 20px;
     font-size: .7rem;
     text-align: center;
     background-color: transparent;

@@ -101,7 +101,7 @@ export class PlayerHeartComponent implements OnInit {
   trackOne(event: Observable<any>) {
     if (event != null) {
       this.serviceTrack.trackService(event).subscribe(data => {
-        let elementOneTitle = data.tracks.items[1].preview_url;
+        let elementOneTitle = data.tracks.items[0].preview_url;
         this.track = elementOneTitle
         this.stream().subscribe(() => { })
         this.audio.play()

@@ -3,7 +3,8 @@
         <input type="text" [(ngModel)]="query" name="search" id="search" placeholder="artiste" />
         <button class="btn-search" (click)="search()">></button>
         <div class="token">
-            <input type="text" name="token" id="token" [(ngModel)]="token" (keyup)="tokenRecord(token)" placeholder="token" />
+            <input type="text" name="token" id="token" [(ngModel)]="token" placeholder="token" />
+        <button (click)="tokenRecord(token)" >envoyer</button>
         </div>
     </div>
 

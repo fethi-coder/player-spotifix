@@ -1,7 +1,7 @@
 .section-one {
     position: absolute;
-    height: 100vh;
-    width: auto;
+    height: 50vh;
+    width: 100%;
 }
 
 h2 {
@@ -21,9 +21,16 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     background-color: transparent;
     color: white;
+}
+
+.token button{
+    height: 30px;
+    width: 55px;
+    border-radius: 12px;
+    background-color: white;
 }
 
 .token p {
@@ -100,9 +107,9 @@ input::content {
 .search-container {
     position: relative;
     height: 400px;
-    width: 60vw;
-    top: 100px;
-    left: 10vw;
+    width: 69vw;
+    top: 150px;
+    left: 1vw;
     display: flex;
     align-items: center;
     justify-content: center;
