@@ -2,7 +2,7 @@
 
     <div class="scroll" id="scroll-id">
         <h2>tes coups de coeur</h2>
-        <div class="container-pop" *ngFor="let a of arrayHeart.slice(1,5).reverse()">
+        <div class="container-pop" *ngFor="let a of arrayHeart.slice(0,5)">
             <button class="card-pop" (click)="sendTrack(a.id)" (click)="sendImage(a.image)">
                 <button class="killer active" (click)="removeHeart(a)">X</button>
             <img [src]="a.image" alt="" class="image-pop">

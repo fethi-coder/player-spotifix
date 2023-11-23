@@ -3,7 +3,7 @@
     <h1 class="duration" *ngIf="duration !=null">{{duration}}</h1>
 
     <div class="container-img">
-        <input class="input-volume" type="range" min="0" max="1" step="0.1" value="0.5" (input)="setVolume($event)">
+        <input class="input-volume" type="range" min="0" max="1" step="0.1" value="0.4" (input)="setVolume($event)" [ngClass]="{ 'input-volume-animation':disk}">
         <img class="imageArtist" [src]="a.images[0].url" [alt]="altDesc" [ngClass]="{ 'imageArtistDisk':disk}">
     </div>
 
@@ -12,7 +12,7 @@
     </div>
 
     <div class="button-player">
-        <button class="btn-player active" (click)="trackOne(a.id)"> > </button>
+        <button class="btn-player active" (click)="trackOne(a.id)" > > </button>
         <button class="btn-player active" (click)="pause()">||</button>
         <button class="btn-heart active" (click)="sendHeart(a)">
             <img class="img-heart" [src]="heartImg" [alt]="altHeart">
